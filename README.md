@@ -4,6 +4,18 @@ Create a Tunnel with the name provided and associate it with a UUID. The relatio
 
 The created Tunnel can serve traffic for multiple hostnames in your Cloudflare account and send traffic to multiple services available to cloudflared, including SSH, RDP, and most arbitrary TCP connections.
 
+Set up a tunnel locally (CLI setup)
+
+1. Download and install cloudflared
+   .deb install
+   ​.rpm install
+2. Authenticate cloudflared
+3. Create a tunnel and give it a name
+4. Create a configuration file
+5. Start routing traffic
+6. Run the tunnel
+7. Check the tunnel
+
 # 🚀 Javascript full-stack 🚀
 
 https://github.com/coding-to-music/cloudflare-tunnel-examples
