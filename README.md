@@ -8,10 +8,6 @@ The created Tunnel can serve traffic for multiple hostnames in your Cloudflare a
 
 https://github.com/coding-to-music/cloudflare-tunnel-examples
 
-https://cloudflare-tunnel-examples.vercel.app
-
-https://cloudflare-tunnel-examples.vercel.app/api/auth
-
 By Cloudflare Documentation
 
 https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel/
