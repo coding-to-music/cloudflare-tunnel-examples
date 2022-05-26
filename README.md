@@ -10,6 +10,8 @@ https://github.com/coding-to-music/cloudflare-tunnel-examples
 
 By Cloudflare Documentation
 
+https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-useful-terms/#default-cloudflared-directory
+
 https://developers.cloudflare.comhttps://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#set-up-a-tunnel-locally-cli-setup
 
 https://developers.cloudflare.comhttps://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel/
