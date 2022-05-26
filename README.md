@@ -63,7 +63,7 @@ Next, install `cloudflared`.
 Use the deb package manager to install `cloudflared` on compatible machines. `amd64 / x86-64` is used in this example.
 
 ```sh
-$ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && dpkg -i cloudflared-linux-amd64.deb
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && dpkg -i cloudflared-linux-amd64.deb
 ```
 
 #### ​.rpm install
@@ -71,7 +71,7 @@ $ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/clo
 Use the rpm package manager to install `cloudflared` on compatible machines. `amd64 / x86-64` is used in this example.
 
 ```sh
-$ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-x86_64.rpm
+wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-x86_64.rpm
 ```
 
 </div>
@@ -84,10 +84,10 @@ $ wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/clo
 You can also build the latest version of `cloudflared` from source with the following steps.
 
 ```sh
-$ git clone https://github.com/cloudflare/cloudflared.git
-$ cd cloudflared
-$ make cloudflared
-$ go install github.com/cloudflare/cloudflared/cmd/cloudflared
+git clone https://github.com/cloudflare/cloudflared.git
+cd cloudflared
+make cloudflared
+go install github.com/cloudflare/cloudflared/cmd/cloudflared
 ```
 
 Depending on where you installed `cloudflared`, you can move it to a known path as well.
@@ -102,7 +102,7 @@ mv /root/cloudflared/cloudflared /usr/bin/cloudflared
 ### 2. Authenticate `cloudflared`
 
 ```bash
-$ cloudflared tunnel login
+cloudflared tunnel login
 ```
 
 Running this command will:
@@ -113,7 +113,7 @@ Running this command will:
 ### 3. Create a tunnel and give it a name
 
 ```bash
-$ cloudflared tunnel create <NAME>
+cloudflared tunnel create <NAME>
 ```
 
 Running this command will:
@@ -127,7 +127,7 @@ From the output of the command, take note of the tunnel’s UUID and the path to
 Confirm that the tunnel has been successfully created by running:
 
 ```bash
-$ cloudflared tunnel list
+cloudflared tunnel list
 ```
 
 ### 4. Create a configuration file
@@ -156,7 +156,7 @@ warp-routing:
 Confirm that the configuration file has been successfully created by running:
 
 ```bash
-$ cat config.yml
+cat config.yml
 ```
 
 ### 5. Start routing traffic
@@ -166,7 +166,7 @@ Now assign a CNAME record that points traffic to your tunnel subdomain.
 **If you are connecting an application**
 
 ```bash
-$ cloudflared tunnel route dns <UUID or NAME> <hostname>
+cloudflared tunnel route dns <UUID or NAME> <hostname>
 ```
 
 **If you are connecting a network**
@@ -174,13 +174,13 @@ $ cloudflared tunnel route dns <UUID or NAME> <hostname>
 Add the IP/CIDR you would like to be routed through the tunnel.
 
 ```bash
-$ cloudflared tunnel route ip add <IP/CIDR> <UUID or NAME>
+cloudflared tunnel route ip add <IP/CIDR> <UUID or NAME>
 ```
 
 You can confirm that the route has been successfully established by running:
 
 ```bash
-$ cloudflared tunnel route ip show
+cloudflared tunnel route ip show
 ```
 
 ### 6. Run the tunnel
@@ -188,13 +188,13 @@ $ cloudflared tunnel route ip show
 Run the tunnel to proxy incoming traffic from the tunnel to any number of services running locally on your origin.
 
 ```bash
-$ cloudflared tunnel run <UUID or NAME>
+cloudflared tunnel run <UUID or NAME>
 ```
 
 If your configuration file has a custom name or is not in the `.cloudflared` directory, add the `--config` flag and specify the path.
 
 ```sh
-$ cloudflared tunnel --config /path/your-config-file.yaml run
+cloudflared tunnel --config /path/your-config-file.yaml run
 ```
 
 {{<Aside>}}
@@ -208,7 +208,7 @@ Cloudflare Tunnel can install itself as a system service on Linux and Windows an
 Your tunnel configuration is complete! If you want to get information on the tunnel you just created, you can run:
 
 ```bash
-$ cloudflared tunnel info
+cloudflared tunnel info
 ```
 
 pcx-content-type: how-to
